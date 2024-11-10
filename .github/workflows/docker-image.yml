@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Login Dockerhub
-      run: echo $DOCKER_HUB_TOKEN | docker login -u owenwijaya22 --password-stdin
+      run: docker login -u owenwijaya22 -p ${{ secrets.DOCKER_HUB_TOKEN }}
 
     - name: Build and Push Docker Images
       run: |
