@@ -12,12 +12,12 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Login Dockerhub
-      run: echo ${{secrets.DOCKER_PASSWORD}} | docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_HUB_TOKEN}}
+      run: docker login -u owenwijaya22 -p ${{secrets.DOCKER_HUB_TOKEN}}
 
     - name: Build and Push Docker Images
       run: |
-        docker build ./01-currency-exchange-microservice-basic/ -t ${{ secrets.DOCKER_USERNAME }}/microservices-currency-exchange:${{ github.run_number }}
-        docker push ${{ secrets.DOCKER_USERNAME }}/microservices-currency-exchange:${{ github.run_number }}
-        docker build ./02-currency-conversion-microservice-basic -t ${{ secrets.DOCKER_USERNAME }}/microservices-currency-conversion:${{ github.run_number }}
-        docker push ${{ secrets.DOCKER_USERNAME }}/microservices-currency-conversion:${{ github.run_number }}
+        docker build ./01-currency-exchange-microservice-basic/ -t owenwijaya22/microservices-currency-exchange:${{ github.run_number }}
+        docker push owenwijaya22/microservices-currency-exchange:${{ github.run_number }}
+        docker build ./02-currency-conversion-microservice-basic -t owenwijaya22/microservices-currency-conversion:${{ github.run_number }}
+        docker push owenwijaya22/microservices-currency-conversion:${{ github.run_number }}
         
