@@ -26,3 +26,4 @@ target/
 # Environment files
 .env
 /ingress.yaml
+/jenkins.pem
