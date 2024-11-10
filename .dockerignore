@@ -1,0 +1,25 @@
+# Maven build directories
+target/
+
+# Git directory
+.git/
+.gitignore
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+
+# Test directories
+test-classes/
+
+# Log files
+*.log
+
+# Documentation
+README.md
+
+ingress.yaml

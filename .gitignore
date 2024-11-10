@@ -1,0 +1,28 @@
+# Maven build directories
+target/
+
+# IDE specific files
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Maven wrapper files (if not wanting to include them)
+.mvn/wrapper/maven-wrapper.jar
+
+# Environment files
+.env
+/ingress.yaml
